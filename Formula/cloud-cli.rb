@@ -1,6 +1,6 @@
 class CloudCli < Formula
   url "https://github.com/s-matsubara/cloud-cli.git",
-      tag: "0.1.1"
+      tag: "0.1.2"
   desc ""
   homepage "https://github.com/s-matsubara/"
 
