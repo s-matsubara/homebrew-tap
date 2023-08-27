@@ -1,4 +1,4 @@
-class CloudCli < Formula
+class ZshFzf < Formula
   url "https://github.com/s-matsubara/zsh-fzf.git",
       tag: "0.2.1"
   desc ""
