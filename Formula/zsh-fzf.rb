@@ -9,7 +9,7 @@ class ZshFzf < Formula
   depends_on "kubectl"
 
   def install
-    pkgshare.install "zsh-fzf.zsh", Dir["cloud-cli", "k8s"]
+    pkgshare.install "zsh-fzf.zsh", Dir["cloud", "k8s"]
   end
 
   def caveats
