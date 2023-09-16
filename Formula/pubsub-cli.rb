@@ -5,42 +5,54 @@
 class PubsubCli < Formula
   desc ""
   homepage ""
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.1/pubsub-cli_Darwin_arm64.tar.gz"
-      sha256 "b2673a2cd56bbf0fbd216538965d270849615f914ea3422da9d789ff8729f8f8"
+    if Hardware::CPU.intel?
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Darwin_x86_64.tar.gz"
+      sha256 "15197cb3a83b6214f0974d4acd509b3cc0102b9e4c14dc1ff475c26f3acd83d8"
 
       def install
         bin.install "pubsub-cli"
+        bash_completion.install "completions/pubsub-cli.bash" => "pubsub-cli"
+        zsh_completion.install "completions/pubsub-cli.zsh" => "_pubsub-cli"
+        fish_completion.install "completions/pubsub-cli.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.1/pubsub-cli_Darwin_x86_64.tar.gz"
-      sha256 "cc5aa646e588a501ccffb85d5e5b58e542820c12589f7b3d6e1c855b1b262df1"
+    if Hardware::CPU.arm?
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Darwin_arm64.tar.gz"
+      sha256 "e068d2c337edeb06a86bdcf8f3ee9127c6470ebd167e2184bd1ca986a6cb89d3"
 
       def install
         bin.install "pubsub-cli"
+        bash_completion.install "completions/pubsub-cli.bash" => "pubsub-cli"
+        zsh_completion.install "completions/pubsub-cli.zsh" => "_pubsub-cli"
+        fish_completion.install "completions/pubsub-cli.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.1/pubsub-cli_Linux_arm64.tar.gz"
-      sha256 "eb767ae27e1f42648b3a9cbe1ca78541c11abf6e5e502324e2bf1c4becb77aab"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Linux_arm64.tar.gz"
+      sha256 "64cbf453f0e8ec4be65cfe3ccd94a5c8eacb8a4d7ccb4e8fe0536c36050acfc5"
 
       def install
         bin.install "pubsub-cli"
+        bash_completion.install "completions/pubsub-cli.bash" => "pubsub-cli"
+        zsh_completion.install "completions/pubsub-cli.zsh" => "_pubsub-cli"
+        fish_completion.install "completions/pubsub-cli.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.1/pubsub-cli_Linux_x86_64.tar.gz"
-      sha256 "44044785449b97723c3816e2768bfb7435033a12f6970949b8ba1f64ff2fdf6e"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Linux_x86_64.tar.gz"
+      sha256 "061b2fecfdba709b94f6785b83e162a8eab6bd993380e72253cba6c919422a85"
 
       def install
         bin.install "pubsub-cli"
+        bash_completion.install "completions/pubsub-cli.bash" => "pubsub-cli"
+        zsh_completion.install "completions/pubsub-cli.zsh" => "_pubsub-cli"
+        fish_completion.install "completions/pubsub-cli.fish"
       end
     end
   end
