@@ -5,12 +5,12 @@
 class PubsubCli < Formula
   desc ""
   homepage ""
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Darwin_x86_64.tar.gz"
-      sha256 "15197cb3a83b6214f0974d4acd509b3cc0102b9e4c14dc1ff475c26f3acd83d8"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.3/pubsub-cli_Darwin_x86_64.tar.gz"
+      sha256 "93f129b20bf42309e187c54380d272a711251a90f52e14703c7eb780326da074"
 
       def install
         bin.install "pubsub-cli"
@@ -20,8 +20,8 @@ class PubsubCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Darwin_arm64.tar.gz"
-      sha256 "e068d2c337edeb06a86bdcf8f3ee9127c6470ebd167e2184bd1ca986a6cb89d3"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.3/pubsub-cli_Darwin_arm64.tar.gz"
+      sha256 "44f4bccaef3433bb9cf73d6dde9014c4fc02a0de9bc5a8562e00a31b5095eb1a"
 
       def install
         bin.install "pubsub-cli"
@@ -34,8 +34,8 @@ class PubsubCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Linux_arm64.tar.gz"
-      sha256 "64cbf453f0e8ec4be65cfe3ccd94a5c8eacb8a4d7ccb4e8fe0536c36050acfc5"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.3/pubsub-cli_Linux_arm64.tar.gz"
+      sha256 "3ca2f10bb142ef3fddb2358a03d2ea05e08a3244e123fb5b81e7f506c5c959a8"
 
       def install
         bin.install "pubsub-cli"
@@ -45,8 +45,8 @@ class PubsubCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.2/pubsub-cli_Linux_x86_64.tar.gz"
-      sha256 "061b2fecfdba709b94f6785b83e162a8eab6bd993380e72253cba6c919422a85"
+      url "https://github.com/s-matsubara/pubsub-cli/releases/download/1.0.3/pubsub-cli_Linux_x86_64.tar.gz"
+      sha256 "16d22a68f26622ad16cf228530973825094dbb241a589c2643d7673ed268da63"
 
       def install
         bin.install "pubsub-cli"
