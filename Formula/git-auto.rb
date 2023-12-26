@@ -5,20 +5,20 @@
 class GitAuto < Formula
   desc ""
   homepage ""
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.0.0/git-auto_Darwin_x86_64.tar.gz"
-      sha256 "0f52c18f8e77e1077a0a4d9e0f174a8750573a01dfcc5ae6bf9c86e27c6d6504"
+    if Hardware::CPU.arm?
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Darwin_arm64.tar.gz"
+      sha256 "4545178a94523d3d7687897c4a17c728c9b3da1707c8b02f36ea924c8f5d4c45"
 
       def install
         bin.install "git-auto"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.0.0/git-auto_Darwin_arm64.tar.gz"
-      sha256 "edcb20873afeb7b4e48209156285e2c91e785030163e2deb4254211d039e80cf"
+    if Hardware::CPU.intel?
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Darwin_x86_64.tar.gz"
+      sha256 "2b29dfe593d299e23a227025540708fd45fca883f6f91077a9960e913e30bd3b"
 
       def install
         bin.install "git-auto"
@@ -28,16 +28,16 @@ class GitAuto < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.0.0/git-auto_Linux_arm64.tar.gz"
-      sha256 "3d16d7b372c331532264af8e5fca4ca7b19c5447be3c13ac5d69cafc202759c4"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Linux_arm64.tar.gz"
+      sha256 "f2314c29b9d88bac9d1267a516b168ed9c4605294298b244ac4cb7b0891e294e"
 
       def install
         bin.install "git-auto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.0.0/git-auto_Linux_x86_64.tar.gz"
-      sha256 "15a5c0ce09c942990c3ed44e4911b72a236b01c82bde44dcc832fb798ad8854e"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Linux_x86_64.tar.gz"
+      sha256 "59745da5bb68d5800feea3734d3468a6739fac71d6ad607ef73a72dfeb75df44"
 
       def install
         bin.install "git-auto"
