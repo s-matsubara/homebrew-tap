@@ -5,20 +5,20 @@
 class GitAuto < Formula
   desc ""
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Darwin_arm64.tar.gz"
-      sha256 "4545178a94523d3d7687897c4a17c728c9b3da1707c8b02f36ea924c8f5d4c45"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.1/git-auto_Darwin_arm64.tar.gz"
+      sha256 "da261a7dbf9986dda116c3e44d49465a293d3f7bfa423b8f304c399f0e2cbc9e"
 
       def install
         bin.install "git-auto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Darwin_x86_64.tar.gz"
-      sha256 "2b29dfe593d299e23a227025540708fd45fca883f6f91077a9960e913e30bd3b"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.1/git-auto_Darwin_x86_64.tar.gz"
+      sha256 "b3dc8bf03bab9ec8046de275273176abe8fbbf769316fff41010e1652fac8373"
 
       def install
         bin.install "git-auto"
@@ -28,20 +28,29 @@ class GitAuto < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Linux_arm64.tar.gz"
-      sha256 "f2314c29b9d88bac9d1267a516b168ed9c4605294298b244ac4cb7b0891e294e"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.1/git-auto_Linux_arm64.tar.gz"
+      sha256 "81b128eda63ec1c46b2936ad067ebcca6284fc7429beae21b8b9bbe26c9278fc"
 
       def install
         bin.install "git-auto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.0/git-auto_Linux_x86_64.tar.gz"
-      sha256 "59745da5bb68d5800feea3734d3468a6739fac71d6ad607ef73a72dfeb75df44"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.1/git-auto_Linux_x86_64.tar.gz"
+      sha256 "b8c54f0c05dfba556d0be7100cf5270dc3541971d2e4d9ac6d5af4a322ea0d5a"
 
       def install
         bin.install "git-auto"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      If you want to register for git alias:
+
+      git config --global alias.mergedd '!git-auto mergedd'
+      git config --global alias.auto-tag '!git-auto tag'
+    EOS
   end
 end
