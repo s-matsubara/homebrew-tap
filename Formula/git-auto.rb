@@ -9,7 +9,7 @@ class GitAuto < Formula
 
   on_macos do
     url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Darwin_all.tar.gz"
-    sha256 "ed2d59dab9c2214f2ac742e57a4789c063d122e77abf2130320a9409096646e3"
+    sha256 "b9c1359e6f46c83a5d203ec0bede5c3779928be6f85442e6105d22a5b0e6d640"
 
     def install
       bin.install "git-auto"
@@ -22,7 +22,7 @@ class GitAuto < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Linux_x86_64.tar.gz"
-      sha256 "a9bb2a6d1c268fe7f62700c9fe362f1c93c8154ca37648fdfa08b3c11676c385"
+      sha256 "652c0ac6f61830e59263caabb3306343f4c91be71a792c887afa2c772641b343"
 
       def install
         bin.install "git-auto"
@@ -33,7 +33,7 @@ class GitAuto < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Linux_arm64.tar.gz"
-      sha256 "12be7896565ddecf9e30959e0d8e922dd2148000680997aa089bd00554ae28fe"
+      sha256 "92476aa3ef9a3f17c4b4b1b97de9d3ba17be9080a54d5d758bd5da1af2f67b51"
 
       def install
         bin.install "git-auto"
