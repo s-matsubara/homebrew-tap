@@ -29,6 +29,6 @@ brew tap s-matsubara/tap
 
 ```bash
 # Formulae
-brew install s-matsubara/tap/pubsub-cli
+brew install s-matsubara/tap/git-auto
 brew install s-matsubara/tap/zsh-fzf
 ```
