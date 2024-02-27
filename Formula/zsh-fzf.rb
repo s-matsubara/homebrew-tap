@@ -1,6 +1,6 @@
 class ZshFzf < Formula
   url "https://github.com/s-matsubara/zsh-fzf.git",
-      tag: "0.2.3"
+      tag: "0.2.4"
   desc ""
   homepage "https://github.com/s-matsubara/"
 
