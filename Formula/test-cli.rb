@@ -5,20 +5,20 @@
 class TestCli < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.1.0/test-cli_Darwin_x86_64.tar.gz"
-      sha256 "a597f15bb501c604707cd05442ad506fd01c357149414246fbae128e1fd89bb1"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_darwin_amd64.tar.gz"
+      sha256 "9b53867215c438d279e8b20e668d935bdc4a30cdf3329d2952b35728dd9f392e"
 
       def install
         bin.install "test-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.1.0/test-cli_Darwin_arm64.tar.gz"
-      sha256 "0355aa996a681ff3d5482e606b62b6a86da152ab034cd2904623578ee28dad1d"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_darwin_arm64.tar.gz"
+      sha256 "455051c569cd69f0f5191a97a69d3f9808b81b26b96eb186de46dfb3b3051b14"
 
       def install
         bin.install "test-cli"
@@ -28,19 +28,23 @@ class TestCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.1.0/test-cli_Linux_x86_64.tar.gz"
-      sha256 "28db9a87a37a623d2833a29543e1fff4d60eb38c7b15f7ec3b008acb99afe726"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_linux_amd64.tar.gz"
+        sha256 "99d74f0beebcfb0acce947f3358e3115ed0a021d942fb530f32225e8238ca892"
 
-      def install
-        bin.install "test-cli"
+        def install
+          bin.install "test-cli"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.1.0/test-cli_Linux_arm64.tar.gz"
-      sha256 "7c48f3d0e5264acdb09b62fc74b9e193d4edf5744903d01bf3013c0879e853d9"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_linux_arm64.tar.gz"
+        sha256 "f8947c2eac61364fc6ca7e3646fdea2d86edd46464c2f00907fb985d948ce404"
 
-      def install
-        bin.install "test-cli"
+        def install
+          bin.install "test-cli"
+        end
       end
     end
   end
