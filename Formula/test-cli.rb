@@ -5,20 +5,20 @@
 class TestCli < Formula
   desc ""
   homepage ""
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_darwin_amd64.tar.gz"
-      sha256 "9b53867215c438d279e8b20e668d935bdc4a30cdf3329d2952b35728dd9f392e"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_darwin_amd64.tar.gz"
+      sha256 "42dd02588fc133ae72e26b8307a702acf000574a457648baa3e366d5c21e16dc"
 
       def install
         bin.install "test-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_darwin_arm64.tar.gz"
-      sha256 "455051c569cd69f0f5191a97a69d3f9808b81b26b96eb186de46dfb3b3051b14"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_darwin_arm64.tar.gz"
+      sha256 "1beb61c37df4d90475e0ccfdb14cf410ac43b6f7f5dd17d4f006638461902c3b"
 
       def install
         bin.install "test-cli"
@@ -27,24 +27,18 @@ class TestCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_linux_amd64.tar.gz"
-        sha256 "99d74f0beebcfb0acce947f3358e3115ed0a021d942fb530f32225e8238ca892"
-
-        def install
-          bin.install "test-cli"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_linux_amd64.tar.gz"
+      sha256 "e43c0adaa9ca336666e8ca79aaec7ee13eedfda43f85f33000ec6ca23123baba"
+      def install
+        bin.install "test-cli"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/s-matsubara/test-cli/releases/download/0.2.1/test-cli_0.2.1_linux_arm64.tar.gz"
-        sha256 "f8947c2eac61364fc6ca7e3646fdea2d86edd46464c2f00907fb985d948ce404"
-
-        def install
-          bin.install "test-cli"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_linux_arm64.tar.gz"
+      sha256 "e71adc4b235c3d7417f2ee8eba88821a209f3e3e58c570f812098fcf9985b7a5"
+      def install
+        bin.install "test-cli"
       end
     end
   end
