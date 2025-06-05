@@ -5,20 +5,20 @@
 class TestCli < Formula
   desc ""
   homepage ""
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_darwin_amd64.tar.gz"
-      sha256 "42dd02588fc133ae72e26b8307a702acf000574a457648baa3e366d5c21e16dc"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.3/test-cli_0.2.3_darwin_amd64.tar.gz"
+      sha256 "6d017f4d058f28c782ab558345ea6323330f84f33d7152bb3664e1b0327bd27a"
 
       def install
         bin.install "test-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_darwin_arm64.tar.gz"
-      sha256 "1beb61c37df4d90475e0ccfdb14cf410ac43b6f7f5dd17d4f006638461902c3b"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.3/test-cli_0.2.3_darwin_arm64.tar.gz"
+      sha256 "b92d3129b8529bfbcbceca55994b047ad2ea8bb7b46a66dbd75e51fa706d49f4"
 
       def install
         bin.install "test-cli"
@@ -28,15 +28,15 @@ class TestCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_linux_amd64.tar.gz"
-      sha256 "e43c0adaa9ca336666e8ca79aaec7ee13eedfda43f85f33000ec6ca23123baba"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.3/test-cli_0.2.3_linux_amd64.tar.gz"
+      sha256 "6529edf33affe6512c9fe2135b3dc09e2e14b42d6a2904cc58c4b8b8c4a49df8"
       def install
         bin.install "test-cli"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.2/test-cli_0.2.2_linux_arm64.tar.gz"
-      sha256 "e71adc4b235c3d7417f2ee8eba88821a209f3e3e58c570f812098fcf9985b7a5"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.3/test-cli_0.2.3_linux_arm64.tar.gz"
+      sha256 "c8e9f1364250f628dbbb521f98338dfa28eb85ac574ebcbd31c467d2cc8993ad"
       def install
         bin.install "test-cli"
       end
