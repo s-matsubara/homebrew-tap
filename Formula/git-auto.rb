@@ -5,11 +5,11 @@
 class GitAuto < Formula
   desc ""
   homepage ""
-  version "1.1.4"
+  version "1.2.1"
 
   on_macos do
-    url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Darwin_all.tar.gz"
-    sha256 "b9c1359e6f46c83a5d203ec0bede5c3779928be6f85442e6105d22a5b0e6d640"
+    url "https://github.com/s-matsubara/git-auto/releases/download/1.2.1/git-auto_1.2.1_darwin_all.tar.gz"
+    sha256 "ae87be118b705c20c05cdd24278cef1463013df32bdf38eef73b8ae113cbb5ae"
 
     def install
       bin.install "git-auto"
@@ -20,10 +20,9 @@ class GitAuto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Linux_x86_64.tar.gz"
-      sha256 "652c0ac6f61830e59263caabb3306343f4c91be71a792c887afa2c772641b343"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.1/git-auto_1.2.1_linux_amd64.tar.gz"
+      sha256 "3bd836fe4a32539fc068572338cd23a5681ca4bfced47a21194422f4558c6956"
       def install
         bin.install "git-auto"
         bash_completion.install "completions/git-auto.bash" => "git-auto"
@@ -31,10 +30,9 @@ class GitAuto < Formula
         fish_completion.install "completions/git-auto.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.1.4/git-auto_Linux_arm64.tar.gz"
-      sha256 "92476aa3ef9a3f17c4b4b1b97de9d3ba17be9080a54d5d758bd5da1af2f67b51"
-
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.1/git-auto_1.2.1_linux_arm64.tar.gz"
+      sha256 "bea3b382edcf8a8917abbb166518ab517e5da108271032b1b788bf054a1275e3"
       def install
         bin.install "git-auto"
         bash_completion.install "completions/git-auto.bash" => "git-auto"
