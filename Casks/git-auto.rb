@@ -2,7 +2,7 @@
 cask "git-auto" do
   desc ""
   homepage ""
-  version "1.2.3"
+  version "1.2.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,18 +14,18 @@ cask "git-auto" do
   fish_completion "completions/git-auto.fish"
 
   on_macos do
-    url "https://github.com/s-matsubara/git-auto/releases/download/1.2.3/git-auto_1.2.3_darwin_all.tar.gz"
-    sha256 "2928f6f5b259ebdd82e8b1c724f8414738bedf15691e56e992a17603a0dbf2ec"
+    url "https://github.com/s-matsubara/git-auto/releases/download/1.2.4/git-auto_1.2.4_darwin_all.tar.gz"
+    sha256 "cdc452c434ee55bd7124fc6a346ecd3964f213db9450d61b726fd5ee384ab5f8"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.3/git-auto_1.2.3_linux_amd64.tar.gz"
-      sha256 "3f2460b4c7bd52f3f4f6f891405fc7f35fafca44187ea4527189fc824cee66f6"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.4/git-auto_1.2.4_linux_amd64.tar.gz"
+      sha256 "a2eda00d87ebeab5557d0046c9eda5170ab2d37e3228e1bbb5917b4ef6a4c868"
     end
     on_arm do
-      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.3/git-auto_1.2.3_linux_arm64.tar.gz"
-      sha256 "09b93221249d1eaec2ac6180548cb36e2d4cab47e57160979bbbe940ffd76832"
+      url "https://github.com/s-matsubara/git-auto/releases/download/1.2.4/git-auto_1.2.4_linux_arm64.tar.gz"
+      sha256 "aab5d420778430ec6b786318f06a894c9887d8b95a63987a376cc06a563ae023"
     end
   end
 
