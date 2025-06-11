@@ -16,6 +16,8 @@ See more at https://docs.brew.sh/Taps
 
 ```bash
 brew install s-matsubara/tap/name
+# or, for casks
+brew install --cask s-matsubara/tap/name
 ```
 
 You can also only add the tap which makes formulae within it
@@ -29,6 +31,10 @@ brew tap s-matsubara/tap
 
 ```bash
 # Formulae
-brew install s-matsubara/tap/git-auto
+brew install s-matsubara/tap/test-cli
 brew install s-matsubara/tap/zsh-fzf
+
+# Casks
+brew install --cask s-matsubara/tap/git-auto
+brew install --cask s-matsubara/tap/test-cli
 ```
