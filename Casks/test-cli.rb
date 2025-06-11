@@ -2,7 +2,7 @@
 cask "test-cli" do
   desc ""
   homepage ""
-  version "0.2.4"
+  version "0.2.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "test-cli" do
 
   on_macos do
     on_intel do
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.4/test-cli_0.2.4_darwin_amd64.tar.gz"
-      sha256 "8e37c4204747f3cdae1b19c4abf54b499db8fa7ed2b89a13773898bbaf6565e1"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.5/test-cli_0.2.5_darwin_amd64.tar.gz"
+      sha256 "5dd998d315aaa704a759ff58ea159f05ea4ae60bc6e34146c7900534e75f4619"
     end
     on_arm do
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.4/test-cli_0.2.4_darwin_arm64.tar.gz"
-      sha256 "dd35fe6c83bc2450587aceb1581b81a44a942cbeea49c604fe60267103a5ed64"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.5/test-cli_0.2.5_darwin_arm64.tar.gz"
+      sha256 "c408253b6bb90ca1ff074e908c0a8e8dbeff867385d564fb4e9dab24521675fc"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.4/test-cli_0.2.4_linux_amd64.tar.gz"
-      sha256 "ca74beb8e106132a9c9478206b55dbc2824275df9d759f8e9415a1efb1dc158e"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.5/test-cli_0.2.5_linux_amd64.tar.gz"
+      sha256 "4d7128475dd92eb580de60d4f494788cb6811ad529881aa516e37240a4b009bf"
     end
     on_arm do
-      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.4/test-cli_0.2.4_linux_arm64.tar.gz"
-      sha256 "0e54941eb1232f2b771eb94e1de3add962f3ce51563af7a65236e8d6add03086"
+      url "https://github.com/s-matsubara/test-cli/releases/download/0.2.5/test-cli_0.2.5_linux_arm64.tar.gz"
+      sha256 "a56ef6ab4f3bb1568a6ef1d27ef098c9014920607c5ea1e2721e9d5cacc5122e"
     end
   end
 
