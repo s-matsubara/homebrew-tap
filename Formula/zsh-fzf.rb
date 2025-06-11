@@ -16,7 +16,7 @@ class ZshFzf < Formula
     <<~EOS
       Add the following line to your ~/.zshrc file:
 
-        [[ -f $(brew --prefix)/share/zsh-fzf/zsh-fzf.zsh  ]] && . $(brew --prefix)/share/zsh-fzf/zsh-fzf.zsh
+        [[ -f $(brew --prefix)/share/zsh-fzf/zsh-fzf.zsh ]] && . $(brew --prefix)/share/zsh-fzf/zsh-fzf.zsh
 
     EOS
   end
