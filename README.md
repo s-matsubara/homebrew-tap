@@ -31,7 +31,6 @@ brew tap s-matsubara/tap
 
 ```bash
 # Formulae
-brew install s-matsubara/tap/test-cli
 brew install s-matsubara/tap/zsh-fzf
 
 # Casks
